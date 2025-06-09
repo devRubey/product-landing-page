@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #00e0ff;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  cursor: default;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00e0ff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background: #fff;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #00e0ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #007c91;
+}
+
+.hero img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.features, .pricing, .contact {
+  padding: 60px 40px;
+  text-align: center;
+  background: #f1f1f1;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+.contact ul {
+  list-style: none;/* removes bullets(to remember next time)*/
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #00e0ff;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: #007c91;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pricing-box {
+  background: white;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #00e0ff;
+  margin: 10px 0;
+}
+
+.hero {
+  background: url('images/wallpaper.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  /*(note)darken effect */
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+

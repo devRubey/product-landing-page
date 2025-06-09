@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SuperProduct - Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">SuperProduct</div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Meet the Future of Tech</h1>
+        <p>The ultimate gadget to boost your daily life.</p>
+        <a href="#pricing" class="cta-button">Pre-Order Now</a>
+      </div>
+      <img src="images/product.jpg" alt="Product Image" />
+    </section>
+
+    <section id="features" class="features">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="feature">🚀 Super fast performance</div>
+        <div class="feature">🔋 Long battery life</div>
+        <div class="feature">📱 Sleek modern design</div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-box">
+        <h3>Launch Offer</h3>
+        <p class="price">$199</p>
+        <p>Includes full product + free shipping</p>
+        <a href="#" class="cta-button">Buy Now</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="https://github.com/devrubey" target="_blank">GitHub</a></li>
+        <li>LinkedIn (coming soon)</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 SuperProduct. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const sections = document.querySelectorAll("section");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+
+  </body>
+</html>
